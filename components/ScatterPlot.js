@@ -45,10 +45,10 @@ const ScatterPlot = ({ data }) => {
             .style('fill', d => colorScale(d.properties.city))
             .style('opacity', 0.7)
             .on('mouseover', (d) => {
-                tooltipRef.current.textContent = `${d.properties?.street}, ${d.properties?.city} ${d.properties?.price}`
+                tooltipRef.current.textContent = `${d.properties?.street}, ${d.properties?.city} ~ $${d.properties?.price}`
             })
-            .on('click' , () => {
-                navigator.clipboard.writeText(tooltipRef.current.textContent)
+            .on('click' , (d) => {
+                navigator.clipboard.writeText(`${d.properties?.street}, ${d.properties?.city} ~ $${d.properties?.price}`)
             })
         // Add x-axis label
         svg.append('text')
@@ -78,6 +78,8 @@ const ScatterPlot = ({ data }) => {
             .style('fill', 'white')
             .text('Find the Outliers! (Click on point to copy address)')
     }, [data]);
+
+
 
     return (
         <div className='grid place-items-center gap-2 text-zinc-100'>
