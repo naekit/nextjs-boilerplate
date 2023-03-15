@@ -37,6 +37,10 @@ function Table() {
                 Header: "N-City",
                 accessor: "properties.n_citi",
             },
+            {
+                Header: "City",
+                accessor: "properties.city",
+            },
         ],
         []
     );
