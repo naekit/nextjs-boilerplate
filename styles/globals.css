@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.d3-tip {
-    line-height: 1;
-    font-weight: bold;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border-radius: 2px;
-  }
+body{
+  background: linear-gradient(to bottom right, #334155 20%, #111827 100%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

@@ -5,9 +5,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className='h-screen bg-gradient-to-tr from-gray-600 to-slate-900 '>
+      <body className='max-h-screen overflow-hidden'>
         <Navbar />
-        <Main />
+        <Main/>
         <NextScript />
       </body>
     </Html>

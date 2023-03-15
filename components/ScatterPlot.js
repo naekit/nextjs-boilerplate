@@ -47,6 +47,9 @@ const ScatterPlot = ({ data }) => {
             .on('mouseover', (d) => {
                 tooltipRef.current.textContent = `${d.properties?.street}, ${d.properties?.city} ${d.properties?.price}`
             })
+            .on('click' , () => {
+                navigator.clipboard.writeText(tooltipRef.current.textContent)
+            })
         // Add x-axis label
         svg.append('text')
             .attr('class', 'axis-label')
@@ -73,7 +76,7 @@ const ScatterPlot = ({ data }) => {
             .attr('y', margin.top / 2)
             .style('text-anchor', 'middle')
             .style('fill', 'white')
-            .text('Find the Outliers!')
+            .text('Find the Outliers! (Click on point to copy address)')
     }, [data]);
 
     return (
