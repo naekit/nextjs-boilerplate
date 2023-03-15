@@ -53,7 +53,7 @@ const ScatterPlot = ({ data }) => {
             .attr('x', width / 2)
             .attr('y', height + margin.top + 40)
             .style('text-anchor', 'middle')
-            .style('fill', 'wheat')
+            .style('fill', 'white')
             .text('Price');
 
         // Add y-axis label
@@ -63,7 +63,7 @@ const ScatterPlot = ({ data }) => {
             .attr('y', -margin.left + 20)
             .attr('transform', 'rotate(-90)')
             .style('text-anchor', 'middle')
-            .style('fill', 'wheat')
+            .style('fill', 'white')
             .text('Sqft');
 
         // Add chart title

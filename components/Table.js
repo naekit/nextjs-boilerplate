@@ -89,14 +89,14 @@ function Table() {
     }, [pageIndex])
 
     return (
-        <div className='grid place-items-center gap-2 text-zinc-100'>
+        <div className='grid place-items-center gap-2 text-slate-300'>
             <select
                 value={selectedCity}
                 onChange={(e) => {
                     setSelectedCity(e.target.value);
                     setPageNumber(0); // reset page number when filter changes
                 }}
-                className="w-10/12 mt-8 p-2 rounded-md border border-gray-400 bg-zinc-500"
+                className="w-10/12 mt-8 p-2 rounded-md border border-gray-400 bg-slate-500 text-slate-100 font-normal tracking-widest"
             >
                 {uniqueCities.map((city) => (
                     <option key={city} value={city}>
@@ -112,7 +112,7 @@ function Table() {
                                 <th
                                     {...column.getHeaderProps(column.getSortByToggleProps())}
                                     className={
-                                        `hover:cursor-pointer hover:text-zinc-300 bg-zinc-700 hover:bg-zinc-500 border-x-2 ${column.isSorted
+                                        `hover:cursor-pointer hover:text-zinc-300 bg-slate-900 hover:bg-zinc-500 border-x-2 border-slate-500 ${column.isSorted
                                             ? column.isSortedDesc
                                                 ? 'desc'
                                                 : 'asc'
@@ -133,10 +133,10 @@ function Table() {
                     {page.map((row, i) => {
                         prepareRow(row);
                         return (
-                            <tr {...row.getRowProps()}>
+                            <tr className="text-blue-100" {...row.getRowProps()}>
                                 {row.cells.map((cell) => {
                                     return (
-                                        <td {...cell.getCellProps()} className='border p-px text-center'>
+                                        <td {...cell.getCellProps()} className='border border-slate-500 p-px text-center'>
                                             {cell.render('Cell')}
                                         </td>
                                     );
@@ -154,16 +154,10 @@ function Table() {
                 >
                     Previous
                 </button>{" "}
-                <button
-                    className='px-4 py-2 bg-zinc-600 text-white rounded disabled:opacity-50 mr-4 hover:bg-zinc-500'
-                    onClick={() => nextPage()}
-                    disabled={!canNextPage}
-                >
-                    Next
-                </button>
+                
                 <span className='mx-2 border-l-2 pl-4'>
                     Page{" "}
-                    <strong>
+                    <strong className="text-white">
                         {pageNumber + 1} of {pageOptions.length}
                     </strong>
                 </span>
@@ -181,6 +175,13 @@ function Table() {
                         style={{ width: "50px" }}
                     />
                 </span>{" "}
+                <button
+                    className='px-4 py-2 bg-zinc-600 text-white rounded disabled:opacity-50 hover:bg-zinc-500'
+                    onClick={() => nextPage()}
+                    disabled={!canNextPage}
+                >
+                    Next
+                </button>
             </div>
         </div>
 

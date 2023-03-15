@@ -17,7 +17,11 @@ function Modal({ setModal, bed, bath, city, counts, price, pricePerSqft, sqft, a
     }
 
     return (
-        <div className="flex w-9/12 bg-zinc-700 py-4 justify-between content-between px-6 text-zinc-300 rounded-md border-zinc-100 border-2">
+        <div className="flex w-9/12 bg-slate-700 py-4 justify-between content-between px-6 text-zinc-100 rounded-sm border-blue-200 border-2">
+            <button className="text-red-400 font-black hover:border-red-500 bg-slate-800 border-2 border-blue-200 px-4 rounded-sm transition-all delay-75" onClick={closeModal} >
+                X
+            </button>
+
             <div className="flex flex-col justify-center items-center">
                 <h3 className="font-bold ">Baths</h3>
                 <p>{bath}</p>
@@ -53,7 +57,6 @@ function Modal({ setModal, bed, bath, city, counts, price, pricePerSqft, sqft, a
                         <p>{counts}</p>
                     </div>
                     : null}
-            <button className="text-red-400 hover:text-red-600" onClick={closeModal}>Close</button>
         </div>
     )
 }

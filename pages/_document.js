@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className='h-screen bg-gradient-to-tr from-zinc-600 to-stone-800 '>
+      <body className='h-screen bg-gradient-to-tr from-gray-600 to-slate-900 '>
         <Navbar />
         <Main />
         <NextScript />
