@@ -6,7 +6,7 @@ function MyPage() {
     <>
       <Head>
         <title>Map Cluster</title>
-        <meta name="description" content="Map cluster visualization of Real Estate data" />
+        <meta name="description" content="Map cluster visualization of Real Estate Data" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
