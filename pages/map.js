@@ -1,7 +1,3 @@
-import { Inter } from 'next/font/google'
-import Table from '@/components/Table'
-import fs from 'fs'
-import path from 'path'
 import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('../components/MapFile'), { ssr: false });
 
