@@ -166,7 +166,7 @@ function Table() {
             </table>
             <div className='mt-4'>
                 <button
-                    className='px-4 py-2 bg-zinc-600 text-white rounded disabled:opacity-50 hover:bg-zinc-500'
+                    className='px-4 py-1 bg-slate-500 border-slate-300 border-2 text-slate-100 rounded disabled:opacity-50 hover:bg-slate-700'
                     onClick={() => previousPage()}
                     disabled={!canPreviousPage}
                 >
@@ -182,7 +182,7 @@ function Table() {
                 <span className='mx-2 border-l-2 pl-4'>
                     Go to page:{" "}
                     <input
-                        className='px-2 py-1 border rounded bg-zinc-700'
+                        className='px-2 py-1 border rounded bg-slate-900'
                         type="number"
                         defaultValue={pageNumber + 1}
                         onChange={(e) => {
@@ -194,7 +194,7 @@ function Table() {
                     />
                 </span>{" "}
                 <button
-                    className='px-4 py-2 bg-zinc-600 text-white rounded disabled:opacity-50 hover:bg-zinc-500'
+                    className='px-4 py-1 w-20 bg-slate-500 border-slate-300 border-2 text-slate-100 rounded disabled:opacity-50 hover:bg-slate-700'
                     onClick={() => nextPage()}
                     disabled={!canNextPage}
                 >
