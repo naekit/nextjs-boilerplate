@@ -182,7 +182,7 @@ function Table() {
                 <span className='mx-2 border-l-2 pl-4'>
                     Go to page:{" "}
                     <input
-                        className='px-2 py-1 border rounded bg-slate-900'
+                        className='px-2 py-1 border rounded-sm bg-slate-900'
                         type="number"
                         defaultValue={pageNumber + 1}
                         onChange={(e) => {
