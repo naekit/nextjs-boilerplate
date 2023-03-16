@@ -46,9 +46,9 @@ function Table() {
             },
             {
                 Header: "Image",
-                accessor: "properties.image_url",
+                accessor: "properties.image_id",
                 Cell: ({cell}) => (
-                    <a className="flex justify-center gap-4 items-center" href={`${cell.value}`}>
+                    <a target="_blank" className="flex justify-center gap-4 items-center" href={cell.row.original.properties.image_url}>
                         {cell.row.original.properties.image_id} <FaLink />
                     </a>
                 )
