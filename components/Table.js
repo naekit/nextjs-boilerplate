@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTable, usePagination, useSortBy } from "react-table";
 import { FaLink, FaSort, FaSortDown, FaSortUp } from 'react-icons/fa';
 import data from "../data/geocollection.json";
-import Link from "next/link";
 
 
 
@@ -11,6 +10,7 @@ function Table() {
     const [selectedCity, setSelectedCity] = useState("Filter by All, or click on table header to sort");
     const dataPerPage = 20; // number of rows to display per page
 
+    // Created a column with a link to the image
     // Memoize the data and columns so that they are only recalculated when necessary
     const memoizedData = useMemo(() => data.features, []);
     const columns = useMemo(
