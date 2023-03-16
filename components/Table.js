@@ -112,7 +112,7 @@ function Table() {
                     setSelectedCity(e.target.value);
                     setPageNumber(0); // reset page number when filter changes
                 }}
-                className="w-10/12 mt-8 p-2 rounded-md border border-gray-400 bg-slate-500 text-slate-100 font-normal tracking-widest"
+                className="w-10/12 mt-8 p-2 rounded-sm border border-gray-400 bg-slate-500 text-slate-100 font-normal tracking-widest"
             >
                 {uniqueCities.map((city) => (
                     <option key={city} value={city}>
@@ -166,7 +166,7 @@ function Table() {
             </table>
             <div className='mt-4'>
                 <button
-                    className='px-4 py-1 bg-slate-500 border-slate-300 border-2 text-slate-100 rounded disabled:opacity-50 hover:bg-slate-700'
+                    className='px-4 py-1 bg-slate-500 border-slate-300 border-2 text-slate-100 rounded-sm disabled:opacity-50 hover:bg-slate-700'
                     onClick={() => previousPage()}
                     disabled={!canPreviousPage}
                 >
@@ -194,7 +194,7 @@ function Table() {
                     />
                 </span>{" "}
                 <button
-                    className='px-4 py-1 w-20 bg-slate-500 border-slate-300 border-2 text-slate-100 rounded disabled:opacity-50 hover:bg-slate-700'
+                    className='px-4 py-1 w-20 bg-slate-500 border-slate-300 border-2 text-slate-100 rounded-sm disabled:opacity-50 hover:bg-slate-700'
                     onClick={() => nextPage()}
                     disabled={!canNextPage}
                 >
