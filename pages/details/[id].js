@@ -10,7 +10,6 @@ export default function ListingDetails({ listing }) {
   }
 
   const transformedUrl = listing.properties.image_url
-  console.log(transformedUrl)
   return (
     <>
       <Head>

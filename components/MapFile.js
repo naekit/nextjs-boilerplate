@@ -93,7 +93,6 @@ function OpenLayersMap({ geojson }) {
                             // Get the values of the feature from the GeoJSON file
                             const feature = features[0];
                             const properties = feature.getProperties();
-                            console.log(properties);
                             setPopup((prev) => ({
                                 ...prev,
                                 visible: true,
