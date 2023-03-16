@@ -1,7 +1,10 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTable, usePagination, useSortBy } from "react-table";
-import { FaSort, FaSortDown, FaSortUp } from 'react-icons/fa';
+import { FaLink, FaSort, FaSortDown, FaSortUp } from 'react-icons/fa';
 import data from "../data/geocollection.json";
+import Link from "next/link";
+
+
 
 function Table() {
     const [pageNumber, setPageNumber] = useState(0);
@@ -41,6 +44,15 @@ function Table() {
                 Header: "City",
                 accessor: "properties.city",
             },
+            {
+                Header: "Image",
+                accessor: "properties.image_url",
+                Cell: ({cell}) => (
+                    <a className="flex justify-center gap-4 items-center" href={`${cell.value}`}>
+                        {cell.row.original.properties.image_id} <FaLink />
+                    </a>
+                )
+            }
         ],
         []
     );
@@ -140,9 +152,11 @@ function Table() {
                             <tr className="text-blue-100" {...row.getRowProps()}>
                                 {row.cells.map((cell) => {
                                     return (
+                                        
                                         <td {...cell.getCellProps()} className='border border-slate-500 p-px text-center'>
-                                            {cell.render('Cell')}
+                                                {cell.render('Cell')}
                                         </td>
+
                                     );
                                 })}
                             </tr>

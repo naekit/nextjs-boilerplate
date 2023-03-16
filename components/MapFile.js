@@ -27,8 +27,8 @@ function OpenLayersMap({ geojson }) {
             });
 
             const clusterSource = new Cluster({
-                distance: 40,
-                minDistance: 50,
+                distance: 20,
+                minDistance: 200,
                 source: vectorSource,
             })
 
