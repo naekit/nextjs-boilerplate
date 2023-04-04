@@ -15,6 +15,8 @@ import Modal from "./Modal";
 
 const geojsonFile = new GeoJSON({ featureProjection: 'EPSG:3857' }).readFeatures(geojson)
 
+// script loader for initializing
+
 function OpenLayersMap({ geojson }) {
     const mapRef = useRef(null);
     const [popup, setPopup] = useState({ visible: false, bath: "", bed: "", city: "", counts: "", price: "", pricePerSqft: "", sqft: "", address: "", });

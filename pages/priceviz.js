@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import fs from 'fs'
 import path from 'path'
 import Scatterplot from '@/components/ScatterPlot'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function PriceViz({ data }) {
   return (
@@ -22,7 +19,9 @@ export default function PriceViz({ data }) {
   )
 }
 
-export async function getStaticProps(){
+
+
+export async function getServerSideProps(){
   const filepath = path.join(process.cwd(), 'data', 'geocollection.json')
   const fileContents = fs.readFileSync(filepath, 'utf8')
   const data = JSON.parse(fileContents)
