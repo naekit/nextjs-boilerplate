@@ -76,7 +76,7 @@ const ScatterPlot = ({ data }) => {
             .attr('y', margin.top / 2)
             .style('text-anchor', 'middle')
             .style('fill', 'white')
-            .text('Find the Outliers! (Click on point to copy address)')
+            .text('You can click on point to copy address)')
     }, [data]);
 
 
